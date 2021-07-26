@@ -19,7 +19,6 @@ $user = GDO_User::current();
 		<?= Website::displayHead(); ?>
 		<?= Website::displayMeta(); ?>
 		<?= Website::displayLink(); ?>
-		<meta name="robots" content="index, follow" />
     </head>
     <body class="nojs n">
         <div class="d-flex" id="wrapper">
