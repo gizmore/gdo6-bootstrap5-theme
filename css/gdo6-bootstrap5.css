@@ -1,7 +1,7 @@
 /** Left bar **/
 #leftnav .list-group-item { padding: 0; }
-.list-group-item .gdt_link { width: 100%; }
-.list-group-item .gdt_link a { width: 100%; padding: 4px 8px; }
+.list-group-item .gdt-link { width: 100%; }
+.list-group-item .gdt-link a { width: 100%; padding: 4px 8px; }
 
 /** Layout **/
 #page-content-wrapper { flex: 1 1 auto; }
