@@ -2,6 +2,7 @@
 /** @var $field \GDO\Table\GDT_Table **/
 /** @var $form \GDO\Form\GDT_Form **/
 use GDO\Util\Common;
+use GDO\Core\Application;
 $headers = $field->getHeaderFields();
 if ($pagemenu = $field->getPageMenu())
 {
@@ -10,6 +11,7 @@ if ($pagemenu = $field->getPageMenu())
 $result = $field->getResult();
 ?>
 <div
+ id="gdt-table-<?=Application::instance()->getMethod()->gdoMethodId()?>-<?=$field->name?>"
  class="gdt-table table-responsive">
 <?php if (!$form) : ?>
 <form method="get" action="<?=$field->href?>" class="b">
@@ -41,7 +43,7 @@ $result = $field->getResult();
 	</thead>
 	<tbody>
 	<?php if ($field->fetchInto) : ?>
-	<?php $dummy = $field->gdtTable->cache->getDummy(); ?>
+	<?php $dummy = $result->table->cache->getDummy(); ?>
 	<?php while ($gdo = $result->fetchInto($dummy)) : ?>
 	<tr data-gdo-id="<?=$gdo->getID()?>">
 	  <?php foreach($headers as $gdoType) :

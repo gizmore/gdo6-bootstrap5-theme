@@ -3,7 +3,7 @@
   <?=$field->htmlIcon()?>
   <label class="form-label"><?= $field->displayLabel(); ?></label>
   <select
-   class="selectpicker"
+   class="selectpicker form-select"
    data-width="100%"
    data-live-search="<?=count($field->choices) > 10 ? 'true' : 'false'?>"
    <?=$field->htmlFormName()?>

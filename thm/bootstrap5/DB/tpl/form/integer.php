@@ -7,17 +7,17 @@
    class="form-control"
    type="number"
    <?=$field->htmlFormName()?>
-   <?= $field->htmlDisabled(); ?>
-   <?= $field->htmlRequired(); ?>
+   <?=$field->htmlDisabled()?>
+   <?=$field->htmlRequired()?>
 <?php if ($field->min !== null) : ?>
-   min="<?= $field->min; ?>"
+   min="<?=$field->min?>"
 <?php endif; ?>
 <?php if ($field->max !== null) : ?>
-   max="<?= $field->max; ?>"
+   max="<?=$field->max?>"
 <?php endif; ?>
 <?php if ($field->step !== null) : ?>
-   step="<?= $field->step; ?>"
+   step="<?=$field->step?>"
 <?php endif; ?>
-   value="<?= $field->getVar(); ?>" />
+   value="<?=$field->displayVar()?>" />
   <?=$field->htmlError()?>
 </div>

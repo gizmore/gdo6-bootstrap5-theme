@@ -1,12 +1,15 @@
 <?php /** @var $field \GDO\DB\GDT_String **/ ?>
-<div class="form-group <?=$field->classError()?>">
-  <?= $field->htmlIcon(); ?>
-  <label class="form-label" <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
+<div
+ class="mb-3 <?=$field->classError()?>">
+  <label class="col-form-label col-auto" <?=$field->htmlForID()?>>
+    <?= $field->htmlIcon(); ?>
+    <?= $field->displayLabel(); ?>
+  </label>
   <input
    <?=$field->htmlID()?>
+   <?=$field->htmlRequired()?>
    type="<?=$field->_inputType?>"
-   class="form-control"
-   <?= $field->htmlRequired(); ?>
+   class="col-auto form-control"
    <?= $field->htmlPattern(); ?>
    <?= $field->htmlDisabled(); ?>
    min="<?= $field->min; ?>"

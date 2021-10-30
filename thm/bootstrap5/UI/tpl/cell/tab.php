@@ -1,9 +1,10 @@
 <?php
 use GDO\UI\GDT_Tab;
-$field instanceof GDT_Tab;
+/** @var $cell boolean **/
+/** @var $field GDT_Tab **/
 ?>
 <div class="container">
-  <h5><?=$field->displayLabel()?></h5>
+  <h4><?=$field->displayLabel()?></h4>
   <div>
 <?php
 foreach ($field->getFields() as $gdoType)

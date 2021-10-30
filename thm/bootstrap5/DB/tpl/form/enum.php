@@ -3,9 +3,11 @@ use GDO\DB\GDT_Enum;
 /** @var $field GDT_Enum **/
 $field instanceof GDT_Enum;
 ?>
-<div class="form-group gdt-enum <?=$field->classError()?>">
-  <?=$field->htmlIcon()?>
-  <label class="form-label" <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
+<div class="mb-3 gdt-enum <?=$field->classError()?>">
+  <label class="form-label" <?=$field->htmlForID()?>>
+    <?=$field->htmlIcon()?>
+    <?= $field->displayLabel(); ?>
+  </label>
   <select
    class="form-control form-select"
    <?=$field->htmlFormName()?>>

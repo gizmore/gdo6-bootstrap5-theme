@@ -2,25 +2,34 @@
 use GDO\Language\GDO_Language;
 use GDO\Language\Module_Language;
 use GDO\Language\Trans;
+$root = GDO_WEB_ROOT;
 $languages = Module_Language::instance()->cfgSupported();
 ?>
-<select
- onchange="GDO.Language.switch(this)"
- class="selectpicker gdo-lang-switch"
- data-width="fit">
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <?=GDO_Language::current()->renderCell()?>
+    <?=GDO_Language::current()->displayName()?>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
 <?php
 foreach ($languages as $language) :
-$language instanceof GDO_Language;
-$sel = Trans::$ISO === $language->getISO() ? ' selected="selected"' : '';
+$sel = Trans::$ISO === $language->getISO() ? 'active' : '';
 $icon = <<<END
+<li>
+ <a
+  class="dropdown-item"
+  onclick="GDO.Language.switch('{$language->getISO()}'); return false;">
   <img
-   class="gdo-language"
+   class="gdo-language {$sel}"
    alt="{$language->displayName()}"
-   src="GDO/Language/img/{$language->getID()}.png" />
-  {$language->displayName()}
+   src="{$root}GDO/Language/img/{$language->getID()}.png" />
+    {$language->displayName()}
+ </a>
+</li>
 END;
-printf("<option data-content='%s' value=\"%s\"%s>%s</option>",
-	$icon, $language->getISO(), $sel, $language->displayName());
+echo $icon;
 endforeach;
-?>  
-</select>
+?>
+  </ul>
+</div>

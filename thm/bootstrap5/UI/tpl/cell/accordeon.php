@@ -1,28 +1,23 @@
 <?php
-use GDO\UI\GDT_Icon;
-
 /** @var \GDO\UI\GDT_Accordeon $field **/
 $n = 0;
 $id = 'gdt-accordion-'.$field->name.'-'.($n++);
 ?>
-<div class="accordion" id="<?=$id.'-accordion'?>">
-  <div class="card z-depth-0 bordered">
-    <div class="card-header" id="<?=$id.'-head'?>">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#<?=$id?>"
-          aria-expanded="true" aria-controls="collapseOne">
-          <?=$field->renderTitle()?>
-        </button>
-      </h5>
-    </div>
-    <div id="<?=$id?>" class="collapse" aria-labelledby="headingOne"
-      data-parent="#<?=$id.'-accordion'?>">
-      <div class="card-body">
-<?php if ($f = $field->getFields()) foreach ($f as $gdt) : ?>
-        <?=$gdt->renderCell()?>
-<?php endforeach; ?>
+<div class="accordion <?=$field->opened ? 'open' : ''?>" id="<?=$id.'-accordion'?>">
+<?php foreach ($field->sections as $i => $gdt) : ?>
+<?php $sectionId = $id . '-section-' . ($i + 1); ?>
+<?php $show = $i === 110 ? 'show' : ''; ?>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#<?=$sectionId?>">
+        <?=$field->titles[$i]?>
+      </button>
+    </h2>
+    <div id="<?=$sectionId?>" class="accordion-collapse collapse <?=$show?>" data-bs-parent="#<?=$id.'-accordion'?>">
+      <div class="accordion-body">
+        <?=$gdt->render()?>
       </div>
     </div>
   </div>
+<?php endforeach; ?>
 </div>
-

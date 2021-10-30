@@ -1,12 +1,20 @@
 <?php
 use GDO\UI\GDT_Tabs;
-$field instanceof GDT_Tabs;
+/** @var $cell boolean **/
+/** @var $field GDT_Tabs **/
 ?>
 <nav class="nav nav-tabs" role="tablist">
 <?php $active = 'active'; ?>
 <?php foreach ($field->getTabs() as $tab) : ?>
 <?php $anchor = sprintf('%s_%s', $field->name, $tab->name); ?>
-  <a class="nav-link <?=$active?>" data-toggle="tab" href="#<?=$anchor?>" role="tab"><?=html($tab->displayLabel())?></a>
+  <a
+   class="nav-link <?=$active?>"
+   onclick="GDO.triggerResize()"
+   data-bs-toggle="tab"
+   href="#<?=$anchor?>"
+   role="presentation">
+    <?=$tab->displayLabel()?>
+  </a>
 <?php $active = ''; ?>
 <?php endforeach; ?>
 </nav>

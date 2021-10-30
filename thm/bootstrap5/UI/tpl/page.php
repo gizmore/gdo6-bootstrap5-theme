@@ -6,21 +6,21 @@ use GDO\UI\GDT_Page;
 use GDO\UI\GDT_Loading;
 use GDO\Profile\GDT_ProfileLink;
 use GDO\Javascript\Module_Javascript;
+use GDO\Language\Trans;
 /** @var $page GDT_Page **/
 $user = GDO_User::current();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=Trans::$ISO?>">
     <head>
-        <meta charset="utf-8" />
      	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<title><?=$page->renderTitle()?></title>
-		<?= Website::displayHead(); ?>
-		<?= Website::displayMeta(); ?>
-		<?= Website::displayLink(); ?>
+		<?=Website::displayHead()?>
+		<?=Website::displayMeta()?>
+		<?=Website::displayLink()?>
     </head>
-    <body class="nojs n">
+    <body class="nojs">
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
@@ -46,15 +46,16 @@ $user = GDO_User::current();
                         </div>
                     </div>
                 </nav>
+                <!-- topTabs -->
+                <?=$page->topTabs->renderCell()?>
                 <!-- Page content-->
-                <div class="container-fluid">
-                    <?=$page->topTabs->renderCell()?>
+                <div id="content-wrap" class="container-fluid">
                     <?=Website::topResponse()->renderCell()?>
                     <?=$page->html?>
                 </div>
             </div>
         </div>
-        <footer><?=$page->bottomNav->renderCell()?></footer>
+        <footer><?=$page->bottomNav->addClass('gdo-footer')->renderCell()?></footer>
 	    <?=GDT_Loading::make()->renderCell()?>
 		<?=Javascript::displayJavascripts(Module_Javascript::instance()->cfgMinifyJS() === 'concat')?>
     </body>

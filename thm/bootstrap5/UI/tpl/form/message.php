@@ -1,14 +1,23 @@
 <?php /** @var $field \GDO\UI\GDT_Message **/
 ?>
-<div class="form-group <?= $field->classError(); ?>">
-  <?= $field->htmlIcon(); ?>
-  <label class="form-label" <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
+<div
+ class="form-group mb-3 <?= $field->classError(); ?>">
+  <label
+   class="col-form-label"
+   <?=$field->htmlForID()?>>
+     <?= $field->htmlIcon(); ?>
+     <?= $field->displayLabel(); ?>
+   </label>
+   <div 
+    <?=$field->htmlID()?>
+    class="<?=$field->classEditor()?>">
   <textarea
-   <?=$field->htmlID()?>
+   <?=$field->htmlRequired()?>
    novalidate="novalidate"
-   class="<?=$field->classEditor()?> form-control"
+   class="form-control"
    <?=$field->htmlFormName()?>
    rows="6"
    <?= $field->htmlDisabled(); ?>><?= $field->displayVar(); ?></textarea>
+   </div>
   <?=$field->htmlError()?>
 </div>
