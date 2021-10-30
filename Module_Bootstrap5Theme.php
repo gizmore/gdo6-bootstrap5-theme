@@ -20,7 +20,6 @@ final class Module_Bootstrap5Theme extends GDO_Module
     public function getDependencies()
     {
         return [
-//             'Moment',
             'Bootstrap5',
         ];
     }
@@ -28,7 +27,8 @@ final class Module_Bootstrap5Theme extends GDO_Module
     public function getModuleLicenseFilenames()
     {
         return [
-            'bootstrap-datepicker/LICENSE',
+        	'bootstrap-datepicker/LICENSE',
+        	'bootstrap4-datetimepicker/LICENSE',
         ];
     }
 

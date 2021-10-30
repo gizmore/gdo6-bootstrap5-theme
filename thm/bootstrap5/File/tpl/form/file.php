@@ -27,6 +27,9 @@ use GDO\File\GDT_File;
 <div class="form-group gdo-flow-file <?=$field->classError()?>">
   <?=$field->htmlIcon()?>
   <?=$field->displayLabel()?>
+<?php if ($field->notNull) : ?>
+ *
+<?php endif; ?>
   <div class="input-group">
     <label class="form-label">
         <span class="btn btn-primary">
@@ -46,5 +49,5 @@ use GDO\File\GDT_File;
      id="gdo-file-input-<?=$field->name?>"
      readonly />
   </div>
-  <?= $field->htmlError(); ?>
+  <?=$field->htmlError()?>
 </div>

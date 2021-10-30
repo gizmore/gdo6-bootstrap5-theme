@@ -59,7 +59,7 @@ input.ib.form-control { display: inline-block; }
 .gdo-has-error,
 .gdo-form-error { background: #f8d7da; }
 .gdo-form-error { margin-bottom: 1rem; padding: 1rem; }
-.gdo-required label:after { content: "*"; }
+.gdo-required.not(.gdo-flow-file) label:after { content: "*"; }
 .gdo-required label { font-weight: bold; }
 div.form-group { margin-bottom: 1rem; }
 .input-group .form-label { margin: 0; }
@@ -74,6 +74,7 @@ a.dropdown-item:hover { cursor: pointer; }
 #_form_versions { margin-bottom: 1rem; }
 
 /** Card **/
+.card-text > .gdt-paragraph:last-child { margin: 0; }
 
 /** Table **/
 ul, ol { margin: 0; padding: 0; }
