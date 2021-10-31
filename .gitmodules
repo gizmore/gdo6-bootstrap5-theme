@@ -3,4 +3,4 @@
 	url = https://github.com/uxsolutions/bootstrap-datepicker
 [submodule "bootstrap4-datetimepicker"]
 	path = bootstrap4-datetimepicker
-	url = ssh://git@github.com/gizmore/bootstrap4-datetimepicker
+	url = https://github.com/gizmore/bootstrap4-datetimepicker
