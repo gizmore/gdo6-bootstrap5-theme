@@ -20,6 +20,7 @@ final class Module_Bootstrap5Theme extends GDO_Module
     public function getDependencies()
     {
         return [
+        	'FontAwesome',
             'Bootstrap5',
         	'Moment',
         ];

@@ -35,6 +35,8 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper { margin-left: 0; }
 
 /** Box/Nav **/
 .gdt-bar > .nav-item:hover { background: #f8f9fa; }
+.nav-justified .nav-item { align-self: center; height: 100%; }
+.nav-justified .nav-item .nav-link { height: inherit; }
 
 /** Panels **/
 p a.gdt-link { display: inline-block; padding: 0; }
@@ -58,14 +60,13 @@ input.ib.form-control { display: inline-block; }
 .gdo-has-error { border: 1px dashed; }
 .gdo-has-error,
 .gdo-form-error { background: #f8d7da; }
-.gdo-form-error { margin-bottom: 1rem; padding: 1rem; }
+.gdo-form-error { padding: 0.5rem; }
 .gdo-required.not(.gdo-flow-file) label:after { content: "*"; }
 .gdo-required label { font-weight: bold; }
 div.form-group { margin-bottom: 1rem; }
 .input-group .form-label { margin: 0; }
 .gdo-file-preview img,
 .gdo-image-file img { max-width: 95vw; max-height: 95vh; }
-
 
 /** Select **/
 a.dropdown-item:hover { cursor: pointer; }
@@ -85,6 +86,9 @@ ul, ol { margin: 0; padding: 0; }
 
 /** List **/
 .unread { background: gold; }
+
+/** Icons **/
+span.gdo-fa-icon > i:before { font-size: 1.5rem; vertical-align: -0.225rem; color: #c0c0c0; }
 
 /*************/
 /** MODULES **/
