@@ -21,6 +21,7 @@ final class Module_Bootstrap5Theme extends GDO_Module
     {
         return [
             'Bootstrap5',
+        	'Moment',
         ];
     }
     
