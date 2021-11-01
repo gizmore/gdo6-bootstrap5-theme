@@ -40,18 +40,18 @@ final class Module_Bootstrap5Theme extends GDO_Module
     public function onIncludeScripts()
     {
         $this->addCSS('css/gdo6-bootstrap5.css');
-        $this->addJavascript('js/gdo6-bootstrap5.js');
-        $this->addJavascript('bootstrap-datepicker/js/bootstrap-datepicker.js');
+        $this->addJS('js/gdo6-bootstrap5.js');
+        $this->addJS('bootstrap-datepicker/js/bootstrap-datepicker.js');
         switch (Trans::$ISO)
         {
             case 'de': $iso = 'de'; break;
             case 'en':
             default: $iso = 'en-US'; break;
         }
-        $this->addJavascript("bootstrap-datepicker/js/locales/bootstrap-datepicker.{$iso}.js");
+        $this->addJS("bootstrap-datepicker/js/locales/bootstrap-datepicker.{$iso}.js");
         $this->addCSS("bootstrap-datepicker/dist/css/bootstrap-datepicker3.css");
         
-        $this->addJavascript("bootstrap4-datetimepicker/src/js/bootstrap-datetimepicker.js");
+        $this->addJS("bootstrap4-datetimepicker/src/js/bootstrap-datetimepicker.js");
         $this->addCSS("bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.css");
     }
 
