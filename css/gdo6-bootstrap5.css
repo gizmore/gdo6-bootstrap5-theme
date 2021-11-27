@@ -12,6 +12,7 @@ footer,
 .gdo-perf-bar { width: 98vw; }
 
 /** Layout **/
+#wrapper { min-height: 100%; }
 #page-content-wrapper { flex: 1 1 auto; display: flex; flex-direction: column; }
 #content-wrap { flex: 1 1 auto; }
 #wrapper { overflow-x: hidden; }
@@ -61,7 +62,7 @@ input.ib.form-control { display: inline-block; }
 .gdo-has-error,
 .gdo-form-error { background: #f8d7da; }
 .gdo-form-error { padding: 0.5rem; }
-.gdo-required:not(.gdo-flow-file) label:after { content: "*"; }
+.gdo-required:not(.gdo-flow-file) label:after { content: "*"; color: #922; }
 .gdo-required label { font-weight: bold; }
 div.form-group { margin-bottom: 1rem; }
 .input-group .form-label { margin: 0; }
@@ -78,7 +79,7 @@ a.dropdown-item:hover { cursor: pointer; }
 .card-text > .gdt-paragraph:last-child { margin: 0; }
 
 /** Icons **/
-span.gdo-fa-icon > i:before { font-size: 1.5rem; vertical-align: -0.225rem; color: #c0c0c0; }
+span.gdo-fa-icon > i:before { font-size: 1.5rem; vertical-align: -0.225rem; color: #777; }
 
 /** Table **/
 ul, ol { margin: 0; padding: 0; }

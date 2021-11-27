@@ -7,9 +7,9 @@ use GDO\UI\GDT_Tab;
   <h4><?=$field->displayLabel()?></h4>
   <div>
 <?php
-foreach ($field->getFields() as $gdoType)
+foreach ($field->getFields() as $gdt)
 {
-	echo $cell ? $gdoType->renderCell() : $gdoType->renderForm();
+	echo $cell ? $gdt->renderCell() : $gdt->renderForm();
 }
 ?>
   </div>
