@@ -21,6 +21,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+window.GDO = window.GDO || {};
+
 window.GDO.Language = {
 	'switch': function(iso) {
 		var curr = window.location.pathname + window.location.search;
@@ -76,7 +78,7 @@ $(function(){
 		return strtr(format, replace);
 	};
 	
-	$('.gdt-date:not(.gdt-birthdate) input').datepicker({
+	$('.gdt-date input').datepicker({
 		useCurrent: false,
 		locale: GDO_LANGUAGE,
 		format: conv(GDO_TRANS.t('df_day')),
@@ -86,6 +88,12 @@ $(function(){
 		useCurrent: false,
 		locale: GDO_LANGUAGE,
 		format: conv(GDO_TRANS.t('df_short')),
+	});
+	
+	$('.gdt-birthdate input').datepicker({
+		useCurrent: false,
+		locale: GDO_LANGUAGE,
+		format: conv(GDO_TRANS.t('df_day')),
 	});
 	
 });

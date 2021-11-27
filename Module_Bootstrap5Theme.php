@@ -8,7 +8,7 @@ use GDO\Language\Trans;
  * Combine a few bootstrap5 plugins into a usable gdo6 theme.
  * 
  * @author gizmore
- * @version 6.10.6
+ * @version 6.11.0
  * @since 6.10.4
  */
 final class Module_Bootstrap5Theme extends GDO_Module
@@ -23,6 +23,7 @@ final class Module_Bootstrap5Theme extends GDO_Module
         	'FontAwesome',
             'Bootstrap5',
         	'Moment',
+        	'JQueryAutocomplete',
         ];
     }
     

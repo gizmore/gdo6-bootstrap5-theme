@@ -1,5 +1,6 @@
 <?php
-/** @var $field \GDO\DB\GDT_Object **/
+use GDO\DB\GDT_Object;
+/** @var $field GDT_Object **/
 ?>
 <div
  data-gdt-config='<?=$field->displayConfigJSON()?>'
@@ -8,7 +9,6 @@
   <label class="form-label" <?=$field->htmlForID()?>><?= $field->displayLabel(); ?></label>
   <input
    <?=$field->htmlID()?>
-   class="gdo-autocomplete-input"
    <?=$field->htmlAutocompleteOff()?>
    class="form-control gdo-autocomplete-input"
    type="text"
@@ -18,5 +18,5 @@
    value="<?=$field->displayVar()?>" />
   <input type="hidden" id="nocompletion_<?=$field->name?>" name="nocompletion_<?=$field->name?>" value="1" />
   <input type="hidden" id="completion-<?=$field->name?>" />
-  <?= $field->htmlError(); ?>
+  <?=$field->htmlError()?>
 </div>

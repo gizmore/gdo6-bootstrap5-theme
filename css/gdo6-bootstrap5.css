@@ -61,7 +61,7 @@ input.ib.form-control { display: inline-block; }
 .gdo-has-error,
 .gdo-form-error { background: #f8d7da; }
 .gdo-form-error { padding: 0.5rem; }
-.gdo-required.not(.gdo-flow-file) label:after { content: "*"; }
+.gdo-required:not(.gdo-flow-file) label:after { content: "*"; }
 .gdo-required label { font-weight: bold; }
 div.form-group { margin-bottom: 1rem; }
 .input-group .form-label { margin: 0; }
@@ -77,18 +77,19 @@ a.dropdown-item:hover { cursor: pointer; }
 /** Card **/
 .card-text > .gdt-paragraph:last-child { margin: 0; }
 
+/** Icons **/
+span.gdo-fa-icon > i:before { font-size: 1.5rem; vertical-align: -0.225rem; color: #c0c0c0; }
+
 /** Table **/
 ul, ol { margin: 0; padding: 0; }
 .gdt-list .list-group > div { padding: 1rem; border-bottom: 1px solid #ccc; }
 .gdt-table td .gdt-link { margin: 0; padding: 0; }
 .gdt-table tr:hover { background: #f8f9fa; }
 .gdt-table td .btn { margin: -0.5rem 0; }
+.gdt-tblorder .sel span.gdo-fa-icon > i:before { color: gold; }
 
 /** List **/
 .unread { background: gold; }
-
-/** Icons **/
-span.gdo-fa-icon > i:before { font-size: 1.5rem; vertical-align: -0.225rem; color: #c0c0c0; }
 
 /*************/
 /** MODULES **/
