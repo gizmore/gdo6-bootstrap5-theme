@@ -53,6 +53,40 @@ div.alert > p { margin-bottom: 0; }
 .gdo-exception p { margin: 0; }
 .gdo-exception em { white-space: pre-wrap; }
 
+/** Dialog **/
+.gdo-dialog {
+	background: #eee;
+	border: 2px outset #666;
+	border-radius: 4px;
+	display: none;
+	width: 50vw;
+	height: 50vh;
+	top: 25%;
+	left: 25%;
+	position: fixed;
+}
+
+.gdo-dialog-close {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.gdo-dialog-inner {
+	width: 100%;
+	height: 100%;
+	background: #f00;
+	
+}
+
+.gdo-dialog dialog {
+	width: 50vw;
+	height: 50vh;
+	top: 25%;
+	left: 25%;
+}
+
+
 /** Form **/
 .gdo-form { margin-bottom: 1rem; }
 input.ib.form-control { display: inline-block; }
