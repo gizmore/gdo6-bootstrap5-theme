@@ -11,10 +11,10 @@ $field->addClass($classes[$field->priority]);
 $field->addClass('gdt-button');
 $field->addClass('gdt-image-button');
 ?>
-<?php if ($href) : ?>
 <a
+<?php if ($href) : ?>
  href="<?=html($href)?>"
+<?php endif; ?>
  <?=$field->htmlDisabled()?>
  <?=$field->htmlAttributes()?>
   ><?=$field->htmlIcon()?> <?=$field->displayLabel()?></a>
-<?php endif; ?>
