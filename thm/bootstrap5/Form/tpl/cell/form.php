@@ -31,7 +31,8 @@ $firstEditableField = null;
 <?php endif; ?>
 <?php foreach ($form->getFields() as $field) : ?>
      <?php if ( ($form->autofocus) && ($field->editable) && ($field->getVar() === null) && ($field->focusable) && (!$field instanceof GDT_File) ) $firstEditableField = $firstEditableField ? $firstEditableField : $field; ?>
-      <?= $field->gdo($form->gdo)->renderForm(); ?>
+      <?php $field->gdo($form->gdo)->var($field->getRequestVar($form->name, $field->var)); ?>
+      <?=$field->renderForm()?>
 <?php endforeach; ?>
 <?php if ($vf) : ?>
 	</div>
