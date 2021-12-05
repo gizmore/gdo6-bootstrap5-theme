@@ -28,7 +28,7 @@ window.GDO.Language = {
 		var curr = window.location.pathname + window.location.search;
 		var href = window.GDO_WEB_ROOT + "index.php?mo=Language&me=SwitchLanguage";
 		href += "&ref=" + encodeURIComponent(curr);
-		href += "&lang=" + iso;
+		href += "&_lang=" + iso;
 		window.location.href = href;
 	}
 };
