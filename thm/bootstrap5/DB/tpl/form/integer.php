@@ -18,6 +18,6 @@
 <?php if ($field->step !== null) : ?>
    step="<?=$field->step?>"
 <?php endif; ?>
-   value="<?=$field->displayVar()?>" />
+   value="<?=$field->display()?>" />
   <?=$field->htmlError()?>
 </div>
