@@ -14,7 +14,7 @@ $result = $field->getResult();
  id="gdt-table-<?=Application::instance()->getMethod()->gdoMethodId()?>-<?=$field->name?>"
  class="gdt-table table-responsive">
 <?php if (!$form) : ?>
-<form method="get" action="<?=$field->href?>" class="b">
+<form method="get" action="<?=html($field->action)?>" class="b">
 <?php endif; ?>
   <input type="hidden" name="mo" value="<?= html(Common::getRequestString('mo','')); ?>" />
   <input type="hidden" name="me" value="<?= html(Common::getRequestString('me','')); ?>" />
